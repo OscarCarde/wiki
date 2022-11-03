@@ -1,0 +1,23 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Search
+{% endblock %}
+
+{% block body %}
+    <h1>All Pages</h1>
+
+    {% if entries|length > 0 %}
+    <ul>
+      Partial Matches:
+        {% for entry in entries %}
+            <li>
+              <a href="{% url 'encyclopedia:entry' entry %}">{{ entry }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    No Matches
+    {% endif %}
+
+{% endblock %}
