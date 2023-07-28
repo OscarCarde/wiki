@@ -1,2 +1,2 @@
 # Python
-Python is a programming language that can be used both for writing **command-line scripts** or building **web applications**. It is popular among the scientific community for its usability and libraries focused on scientific research.
+Python is a programming language that can be used both for writing **command-line scripts** or building **web applications**. It is popular among the scientific community for its usability and libraries focused on scientific research. It is one of the most popular languages.
