@@ -22,7 +22,7 @@ def search(request):
     for entry in entries:
         if query.lower() == entry.lower():
             return HttpResponseRedirect(f"/wiki/{entry}")
-        elif re.search(query.lower(), entry.lower()) != None:
+        elif re.search(query.lower(), entry.lower()):
             search_entries.append(entry)
         else:
             continue
@@ -83,13 +83,13 @@ def entry(request, entry_name):
     fullEntry = util.get_entry(entry_name)
 
 
-    if fullEntry == None:
+    if not fullEntry:
         #Go to Page not found
         return render(request, "encyclopedia/notFound.html")
     else:
         fullEntry = markdown2.markdown(fullEntry)
 
-        title = re.search(entry_name, fullEntry).group()
+        title = re.search(entry_name, fullEntry, re.IGNORECASE).group()
 
         return render(request, "encyclopedia/entry.html", {
             "title": title, "entry": fullEntry
