@@ -2,6 +2,11 @@
 
 https://cs50.harvard.edu/web/2020/projects/1/
 
+
+
+https://github.com/OscarCarde/wiki/assets/68070683/31fabcde-26a4-4ce8-9ad8-f3f90a41be19
+
+
 **Specification:**
 
 - [x] Entry Page: Visiting /wiki/TITLE, where TITLE is the title of an encyclopedia entry, should render a page that displays the contents of that encyclopedia entry.
